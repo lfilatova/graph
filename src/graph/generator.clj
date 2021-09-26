@@ -72,7 +72,7 @@
         max-amount-edges (* amount-vertices (dec amount-vertices))]
     (if (or (< amount-edges min-amount-edges)
             (> amount-edges max-amount-edges))
-      (println (format "Graph can not be created because for %s amount of vertices the amount of edges must be from %s to %s"
-                       amount-vertices min-amount-edges max-amount-edges))
+      (println (format "Graph can not be created with %s vertices and %s edges because the amount of edges must be from %s to %s"
+                       amount-vertices amount-edges min-amount-edges max-amount-edges))
       (generate-simple-directed-graph amount-vertices amount-edges))))
 
